@@ -4,7 +4,7 @@ Scenario.name = MapRouteMovement
 Scenario.endTime = 6000
 Scenario.updateInterval = 0.1
 Scenario.simulateConnections = false
-MovementModel.worldSize = 1000,1000
+MovementModel.worldSize = 250,200
 Events.nrof = 0
 
 # Communication Interface
@@ -16,10 +16,11 @@ myInterface.transmitSpeed = 0
 Scenario.nrofHostGroups = 1
 
 Group1.groupID = x
-Group1.nrofHosts = 1
+Group1.nrofHosts = 100
 Group1.nrofInterfaces = 1
 Group1.interface1 = myInterface
-Group1.movementModel = MapRouteMovement
+Group1.movementModel = ShortestPathMapBasedMovement
+# MapRouteMovement
 Group1.routeFile = data/cluster/ferryroute.wkt
 Group1.routeType = 1
 Group1.router = PassiveRouter
